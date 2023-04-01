@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <div class='container'>
+          <div class='options'>
+              <select id="voice-select"></select>
+              <button class='form' id='rate-button'>Rate</button>   
+              <button class='form' id='pitch-button'>Pitch</button>
+              <button class='form' id='volume-button'>Volume</button>
+          </div>
+          <div class='rate-container'>
+            <p id="rate-value" >1</p>
+              <input type="range" id="rate" class="custom-range" min="0.5" max="2" value="1" step="0.1">
+           </div>
+          
+          <div class='pitch-container'>
+            <p id="pitch-value" >1</p>
+              <input type="range" id="pitch" class="custom-range" min="0.5" max="2" value="1" step="0.1">
+           </div>
+          
+          <div class='volume-container'>
+            <p id="volume-value" >1</p>
+              <input type="range" id="volume" class="custom-range" min="0" max="1" value="1" step="0.1">
+           </div>
+          
+            <div class='text-area'>
+              <textarea placeholder='Start typing...' id='text-input'></textarea>
+            </div>
+          
+          <div class='speak'>
+            <button class='speak-pause'>Speak</button>
+        </div>
+          </div>
+        
+      </body>
+</body>
+<script src="script.js"></script>
+</html>

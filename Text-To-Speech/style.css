@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Lato', sans-serif;
+}
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh; 
+  background-image:radial-gradient(rgba(58,67,88,.8),rgba(58,67,88,.8) 45%,rgba(58,67,88,.6)),url('https://uploads-ssl.webflow.com/6215d56ae85caa0a3026a433/627cb662df0be62be01ec545_Home-Hero-background.png');
+}
+
+.container{
+  height:80%;
+  width:50%;
+  background-color:rgba(40,46,61,.9);
+  border-radius:2rem;
+  padding:2rem;
+  display:grid;
+}
+
+.options{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.options>*{
+  padding:.6rem 1rem;
+  border-radius:5rem;
+}
+
+#voice-select{
+  border:none;
+  font-size:.8rem;
+  cursor:pointer;
+  /*appearance:none;*/ 
+}
+
+.form{
+  background-color:transparent;
+  border:none;
+  background-color:white;
+  font-size:.8rem;
+  cursor:pointer;
+}
+
+.form:hover, select:hover{
+  background-color:#E5E7EC;
+}
+
+.form:active, select:active{
+  background-color:#D4D7DF;
+}
+
+
+textarea{
+  margin-top:2rem;
+  resize:none;
+  border:none;
+  border-radius:1rem;
+  min-height:40vh;
+  width:100%;
+  padding:1rem;
+  font-size:1rem;
+  outline-color:transparent;
+
+}
+
+.speak button{
+  margin-top:2rem;
+  cursor:pointer;
+  width:100%;
+  padding:1rem 0;
+  border-radius:2rem;
+  border:none;
+  font-size:1.5rem;
+  background-color:#FFCE00;
+  color:rgb(24, 29, 43);
+  letter-spacing:2px;
+  outline-color:transparent;
+}
+
+
+#rate-value, #pitch-value, #volume-value{
+  color:#f6f7f9;
+  text-align:center;
+  letter-spacing:2px;
+}
+
+#rate, #volume, #pitch{
+    width:100%;
+  cursor:pointer;
+}
+
+.rate-container, .pitch-container, .volume-container{
+  display:none;
+}
+
+.active{
+  display:block;
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+  .options{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  
+  select{
+    width:100%;
+    margin-bottom:1rem;
+  }
+  
+  .form{
+    width:33%;
+  }
+}
+
+@media only screen and (max-width:767px){
+  .options{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+  }
+  
+  select, .form{
+    width:100%;
+  }
+  
+  .speak button{
+    font-size:1rem;
+    padding:.5rem 0;
+  }
+}
